@@ -11,15 +11,15 @@ const iconSpeed = 100; // Max-speed in ms for animating one icon down
 const indexes = [0, 0, 0]; // Holds icon indexes
 // const debugEl = document.querySelector('#debug');
 
-const numOfSpins = 5; // Number of the strip spins
+const spinsValue = 5; // Value for the strip spins
 const hardcodedValue = 12; // 10+2 (numOfIcons + "zero" icon index)
 
 
 const roll = (reel, offset = 0) => {
 	//target icon calculations
 	const delta = offset === 0 
-		? (offset + numOfSpins) * numOfIcons + hardcodedValue 
-		: (offset + numOfSpins) * numOfIcons + Math.round(Math.random() * numOfIcons); 
+		? (offset + spinsValue) * numOfIcons + hardcodedValue 
+		: (offset + spinsValue) * numOfIcons + Math.round(Math.random() * numOfIcons); 
 
 	return new Promise((resolve, reject) => {
 		
