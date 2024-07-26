@@ -2,7 +2,7 @@
 /**
  * Setup
  */
-const debugEl = document.getElementById('debug'),
+const //debugEl = document.getElementById('debug'),
 			// Mapping of indexes to icons: start from banana in middle of initial position and then upwards
 			iconMap = [ "one", "eight", "zero", "four", "seven", "two", "three", "six", "nine", "five"],
 			// Width of the icons
@@ -61,7 +61,7 @@ const roll = (reel, offset = 0) => {
  */
 function rollAll() {
 	
-	debugEl.textContent = 'rolling...';
+	// debugEl.textContent = 'rolling...';
 	
 	const reelsList = document.querySelectorAll('.slots > .reel');
 	
@@ -74,8 +74,8 @@ function rollAll() {
 		.then((deltas) => {
 			// add up indexes
 			deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta)%(num_icons));
-			debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
-			console.log(deltas);
+			// debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
+			// console.log(deltas);
 			// Win conditions
 			// if (indexes[0] == indexes[1] || indexes[1] == indexes[2]) {
 			// 	const winCls = indexes[0] == indexes[2] ? "win2" : "win1";
