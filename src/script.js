@@ -48,7 +48,7 @@ rollAll = () => {
 		.all([...reelsList].map((reel, i) => roll(reel, i)))	
 		.then((deltas) => {
 			// add up indexes
-			deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta)%(numOfIcons));
+			deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta) % numOfIcons);
 			// debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
 		});
 };
